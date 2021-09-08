@@ -5,9 +5,9 @@ export default class Navbar extends Component {
         return (
             <div>
                 
-                <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <nav className="navbar navbar-expand-lg navbar-light bg-light ">
   <div className="container-fluid w-auto ">
-    <a className="navbar-brand text-center" href="/">NewsMonkey</a>
+    <a className="navbar-brand text-center" style={{fontSize:"28px"}} href="/">FlashTales</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>

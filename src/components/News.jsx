@@ -55,13 +55,14 @@ async componentDidMount() {
     return (
       <div className="container my-3">
         <h1 className="my-3 explore">Explore</h1>
+        <p className="explore p1">Get a comprehensive view of top stories and headlines</p>
         {this.state.loading && <Spinner/>}     
         <div className="row">
           {!this.state.loading && this.state.articles.map((article) => {
             return (
               <div className="col-md-4 my-3" key={article.url}>
                 <NewsItem
-                  title={article.title?article.title.slice(0,45):""}
+                  title={article.title?article.title.slice(0,):""}
                   // description={article.description?article.description.slice(0,88):""}
                   img={article.urlToImage}
                 newsUrl={article.url}
@@ -70,7 +71,7 @@ async componentDidMount() {
             );
           })}
         </div>
-        <div className="container d-flex justify-content-center">
+        <div className="container newsbtn d-flex justify-content-center">
         <button disabled={this.state.page<=1} type="button" className="btn btn-dark" style={{marginRight:"12px"}} onClick={this.handlePrevClick}>&#8592;Previous</button>
         <button disabled={this.state.page +1>Math.ceil(this.state.totalResults/this.props.pageSize)} type="button" className="btn btn-dark" onClick={this.handleNextClick}>Next&#8594;</button>
         </div>
